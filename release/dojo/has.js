@@ -1,0 +1,3 @@
+//>>built
+define("dojo/has",["require"],function(g){var b=g.has||function(){};b.add("dom-addeventlistener",!!document.addEventListener);b.add("touch","ontouchstart"in document);b.add("device-width",screen.availWidth||innerWidth);b.clearElement=function(a){a.innerHTML="";return a};b.normalize=function(a,c){var d=a.match(/[\?:]|[^:\?]*/g),f=0,e=function(a){var c=d[f++];if(c==":")return 0;else{if(d[f++]=="?")return!a&&b(c)?e():(e(!0),e(a));return c||0}};return(a=e())&&c(a)};b.load=function(a,b,d){a?b([a],d):d()};
+return b});

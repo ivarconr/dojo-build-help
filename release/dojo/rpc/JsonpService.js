@@ -1,0 +1,3 @@
+//>>built
+define("dojo/rpc/JsonpService",["../_base/array","../_base/declare","../_base/lang","./RpcService","../io/script"],function(d,e,b,f,g){return e("dojo.rpc.JsonpService",f,{constructor:function(a,c){this.required&&(c&&b.mixin(this.required,c),d.forEach(this.required,function(a){if(a==""||a==void 0)throw Error("Required Service Argument not found: "+a);}))},strictArgChecks:!1,bind:function(a,c,b,d){g.get({url:d||this.serviceUrl,callbackParamName:this.callbackParamName||"callback",content:this.createRequest(c),
+timeout:this.timeout,handleAs:"json",preventCache:!0}).addCallbacks(this.resultCallback(b),this.errorCallback(b))},createRequest:function(a){a=b.isArrayLike(a)&&a.length==1?a[0]:{};b.mixin(a,this.required);return a}})});

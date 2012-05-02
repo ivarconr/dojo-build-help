@@ -1,0 +1,3 @@
+//>>built
+define("dijit/_base/popup",["dojo/dom-class","../popup","../BackgroundIframe"],function(d,b){var e=b._createWrapper;b._createWrapper=function(a){a.declaredClass||(a={_popupWrapper:a.parentNode&&d.contains(a.parentNode,"dijitPopup")?a.parentNode:null,domNode:a,destroy:function(){}});return e.call(this,a)};var f=b.open;b.open=function(a){if(a.orient&&typeof a.orient!="string"&&!("length"in a.orient)){var b=[],c;for(c in a.orient)b.push({aroundCorner:c,corner:a.orient[c]});a.orient=b}return f.call(this,
+a)};return b});

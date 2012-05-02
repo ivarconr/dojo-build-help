@@ -1,0 +1,2 @@
+//>>built
+define("dijit/_BidiSupport",["./_WidgetBase"],function(b){b.extend({getTextDir:function(a){return this.textDir=="auto"?this._checkContextual(a):this.textDir},_checkContextual:function(a){return(a=/[A-Za-z\u05d0-\u065f\u066a-\u06ef\u06fa-\u07ff\ufb1d-\ufdff\ufe70-\ufefc]/.exec(a))?a[0]<="z"?"ltr":"rtl":this.dir?this.dir:this.isLeftToRight()?"ltr":"rtl"},applyTextDir:function(a,b){var c=this.textDir=="auto"?this._checkContextual(b):this.textDir;if(a.dir!=c)a.dir=c}});return b});

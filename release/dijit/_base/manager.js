@@ -1,0 +1,2 @@
+//>>built
+define("dijit/_base/manager",["dojo/_base/array","dojo/_base/config","../registry",".."],function(c,d,e,a){c.forEach(["byId","getUniqueId","findWidgets","_destroyAll","byNode","getEnclosingWidget"],function(b){a[b]=e[b]});a.defaultDuration=d.defaultDuration||200;return a});

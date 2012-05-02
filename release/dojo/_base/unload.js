@@ -1,0 +1,2 @@
+//>>built
+define("dojo/_base/unload",["./kernel","./connect"],function(a,b){var c=window;a.addOnWindowUnload=function(e,d){if(!a.windowUnloaded)b.connect(c,"unload",a.windowUnloaded=function(){});b.connect(c,"unload",e,d)};a.addOnUnload=function(a,d){b.connect(c,"beforeunload",a,d)};return{addOnWindowUnload:a.addOnWindowUnload,addOnUnload:a.addOnUnload}});

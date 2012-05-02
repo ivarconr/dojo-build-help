@@ -1,0 +1,2 @@
+//>>built
+define("dijit/_Contained",["dojo/_base/declare","./registry"],function(c,d){return c("dijit._Contained",null,{_getSibling:function(b){var a=this.domNode;do a=a[b+"Sibling"];while(a&&a.nodeType!=1);return a&&d.byNode(a)},getPreviousSibling:function(){return this._getSibling("previous")},getNextSibling:function(){return this._getSibling("next")},getIndexInParent:function(){var b=this.getParent();if(!b||!b.getIndexOfChild)return-1;return b.getIndexOfChild(this)}})});

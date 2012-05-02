@@ -1,0 +1,3 @@
+//>>built
+define("dijit/Toolbar",["require","dojo/_base/declare","dojo/_base/kernel","dojo/keys","dojo/ready","./_Widget","./_KeyNavContainer","./_TemplatedMixin"],function(b,c,d,a,e,f,g,h){d.isAsync||e(0,function(){b(["dijit/ToolbarSeparator"])});return c("dijit.Toolbar",[f,h,g],{templateString:'<div class="dijit" role="toolbar" tabIndex="${tabIndex}" data-dojo-attach-point="containerNode"></div>',baseClass:"dijitToolbar",postCreate:function(){this.inherited(arguments);this.connectKeyNavHandlers(this.isLeftToRight()?
+[a.LEFT_ARROW]:[a.RIGHT_ARROW],this.isLeftToRight()?[a.RIGHT_ARROW]:[a.LEFT_ARROW])}})});

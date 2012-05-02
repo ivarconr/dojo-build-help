@@ -1,0 +1,2 @@
+//>>built
+define("dijit/form/_FormValueWidget",["dojo/_base/declare","dojo/_base/sniff","./_FormWidget","./_FormValueMixin"],function(c,f,g,h){return c("dijit.form._FormValueWidget",[g,h],{_layoutHackIE7:function(){if(f("ie")==7)for(var a=this.domNode,b=a.parentNode,d=a.firstChild||a,c=d.style.filter,e=this;b&&b.clientHeight==0;)(function(){var a=e.connect(b,"onscroll",function(){e.disconnect(a);d.style.filter=(new Date).getMilliseconds();setTimeout(function(){d.style.filter=c},0)})})(),b=b.parentNode}})});

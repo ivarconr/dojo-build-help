@@ -1,0 +1,3 @@
+//>>built
+define("dijit/hccss",["require","dojo/_base/config","dojo/dom-class","dojo/dom-construct","dojo/dom-style","dojo/ready","dojo/_base/sniff","dojo/_base/window"],function(f,g,h,i,j,k,b,c){(b("ie")||b("mozilla"))&&k(90,function(){var d=i.create("div",{id:"a11yTestNode",style:{cssText:'border: 1px solid;border-color:red green;position: absolute;height: 5px;top: -999px;background-image: url("'+(g.blankGif||f.toUrl("dojo/resources/blank.gif"))+'");'}},c.body()),a=j.getComputedStyle(d);if(a){var e=a.backgroundImage;
+(a.borderTopColor==a.borderRightColor||e!=null&&(e=="none"||e=="url(invalid-url:)"))&&h.add(c.body(),"dijit_a11y");b("ie")?d.outerHTML="":c.body().removeChild(d)}})});

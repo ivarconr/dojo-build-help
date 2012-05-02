@@ -1,0 +1,2 @@
+//>>built
+define("dojo/Evented",["./aspect","./on"],function(d,b){function c(){}var e=d.after;c.prototype={on:function(a,c){return b.parse(this,a,c,function(a,b){return e(a,"on"+b,c,!0)})},emit:function(){var a=[this];a.push.apply(a,arguments);return b.emit.apply(b,a)}};return c});

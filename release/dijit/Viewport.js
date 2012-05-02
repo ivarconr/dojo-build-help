@@ -1,0 +1,2 @@
+//>>built
+define("dijit/Viewport",["dojo/Evented","dojo/on","dojo/ready","dojo/_base/window","dojo/window"],function(e,f,g,h,d){var a=new e;g(200,function(){var b=d.getBox();a._rlh=f(h.global,"resize",function(){var c=d.getBox();b.h==c.h&&b.w==c.w||(b=c,a.emit("resize"))})});return a});

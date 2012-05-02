@@ -1,0 +1,3 @@
+//>>built
+define("dijit/_WidgetsInTemplateMixin",["dojo/_base/array","dojo/_base/declare","dojo/parser","dijit/registry"],function(b,c,d,e){return c("dijit._WidgetsInTemplateMixin",null,{_earlyTemplatedStartup:!1,widgetsInTemplate:!0,_beforeFillContent:function(){if(this.widgetsInTemplate){var a=this.domNode,b=this._startupWidgets=d.parse(a,{noStart:!this._earlyTemplatedStartup,template:!0,inherited:{dir:this.dir,lang:this.lang,textDir:this.textDir},propsThis:this,scope:"dojo"});this._supportingWidgets=e.findWidgets(a);
+this._attachTemplateNodes(b,function(a,b){return a[b]})}},startup:function(){b.forEach(this._startupWidgets,function(a){a&&!a._started&&a.startup&&a.startup()});this.inherited(arguments)}})});

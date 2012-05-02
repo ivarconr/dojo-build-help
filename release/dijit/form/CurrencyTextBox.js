@@ -1,0 +1,3 @@
+//>>built
+define("dijit/form/CurrencyTextBox",["dojo/currency","dojo/_base/declare","dojo/_base/lang","./NumberTextBox"],function(a,e,c,d){return e("dijit.form.CurrencyTextBox",d,{currency:"",baseClass:"dijitTextBox dijitCurrencyTextBox",regExpGen:function(b){return"("+(this.focused?this.inherited(arguments,[c.mixin({},b,this.editOptions)])+"|":"")+a.regexp(b)+")"},_formatter:a.format,_parser:a.parse,parse:function(b){var a=this.inherited(arguments);isNaN(a)&&/\d+/.test(b)&&(a=c.hitch(c.mixin({},this,{_parser:d.prototype._parser}),
+"inherited")(arguments));return a},_setConstraintsAttr:function(b){if(!b.currency&&this.currency)b.currency=this.currency;this.inherited(arguments,[a._mixInDefaults(c.mixin(b,{exponent:!1}))])}})});
